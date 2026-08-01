@@ -57,3 +57,12 @@ function saveInfo(){
 
 }
 saveButton.addEventListener('click',saveInfo);
+
+// adding functionality to cancel button
+
+cancelButton =document.getElementById('cancelButton');
+function cancelInfo(){
+    addingBook.style.display='none';
+
+}
+cancelButton.addEventListener('click' , cancelInfo);
