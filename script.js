@@ -30,7 +30,7 @@ function book(title,author,pages,read){
 
 }
 // adding book in array
-addBook =function(){
+addBook =function(title,author, pages ,read){
     
     mybook =new book(title,author, pages ,read); 
     myLibrary.push(mybook);
@@ -43,4 +43,17 @@ addingBook=document.getElementById("addingBook");
     addingBook.style.display='block';
 }
 addButton.addEventListener('click',showForm);
+
+
 // adding functionality to save button 
+
+saveButton=document.getElementById('saveButton');
+function saveInfo(){
+    const title=document.getElementById('title').value;
+    const author=document.getElementById('author').value;
+    const pages=document.getElementById('pages').value;
+    addBook(title,author, pages ,read);
+
+
+}
+saveButton.addEventListener('click',saveInfo);
